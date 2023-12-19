@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <script src="https://kit.fontawesome.com/7ced233697.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/output.css">
+
+</head>
+<body>
+  <div style="position: absolute; top:35%; left:35%; z-index:2">
+  {% for message in get_flashed_messages() %}
+  <div class="card w-96 h-40 shadow-xl bg-amber-950 " id="flash-message" onshow="pointer-function">
+    <div class="card-body">
+      <p class="text-lg font-semibold font-serif text-white">{{message}}</p>
+      <div class="card-actions justify-end items-end">
+        <button id="close-button" class="btn btn-sm" onclick="hideFlashMessage()">Close</button>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<div id="page-content" class="z-1">
+    <nav class="flex justify-between items-center">
+      <div class="px-4">
+        <a href="/home"><button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Home
+          </span>
+        </button></a>
+      </div>
+        <div class="flex items-center">
+            <img class="w-15 h-[85px]" src="static/logo2.png" alt="">
+            <img class="w-15 h-[85px]" src="static/logo1.png" alt="">
+        </div>
+        <div>
+        <a href="/like"><button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <i class="fa-solid fa-heart"></i>
+          </span>
+        </button></a>
+        <a href="/logout"><button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Log Out
+          </span>
+        </button></a>
+      </div>
+    </nav>
+    
+
+    <!--item block 1-->
+    <div class="flex flex-row space-x-6 py-6 max-w-full">
+    <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/5.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Necklace</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="5.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/1.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Ring</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Ring">
+                <input type="hidden" name="img_data" value="1.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/neck.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Necklace</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="neck.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/6.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Earring</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Earring">
+                <input type="hidden" name="img_data" value="6.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <!-- item block 2-->
+    <div class="flex space-x-6 py-6">
+      <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/7.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Earring">
+                <input type="hidden" name="img_data" value="7.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/8.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Earring">
+                <input type="hidden" name="img_data" value="8.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/9.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Earring">
+                <input type="hidden" name="img_data" value="9.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/10.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Earring">
+                <input type="hidden" name="img_data" value="10.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <!--item block 3-->
+    <div class="flex space-x-6 py-6 w-screen">
+        <form action="/add_like" method="POST">
+        <div class="card card-compact bg-base-100 shadow-xl w-80">
+            <figure><img class=" h-80" src="static/11.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="11.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="h-80" src="static/12.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="12.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="h-80" src="static/13.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="13.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="h-80" src="static/15.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="15.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <!--item block 4-->
+    <div class="flex space-x-6 py-6">
+      <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/14.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="14.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST" >
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/178.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="178.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/16.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="16.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900" ><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+          <form action="/add_like" method="POST">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+            <figure><img class="w-80 h-80" src="static/2.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title font-serif justify-center">Shoes!</h2>
+              <div class="card-actions justify-center">
+                <input type="hidden" name="desc" value="Necklace">
+                <input type="hidden" name="img_data" value="2.jpg">
+                <button type="submit" class="btn btn-primary bg-amber-950 hover:bg-amber-900"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div> 
+  </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var flashMessage = document.getElementById('flash-message');
+        var pageContent = document.getElementById('page-content');
+    
+        if (flashMessage) {
+          flashMessage.style.display = 'absolute';
+          setElementsOpacity(pageContent, 0.8);
+          pageContent.style.pointerEvents = 'none';
+        }
+    
+        function hideFlashMessage() {
+          flashMessage.style.display = 'none';
+          setElementsOpacity(pageContent, 1);
+          pageContent.style.pointerEvents = 'auto';
+        }
+
+        function setElementsOpacity(element, opacity) {
+          var elements = element.querySelectorAll('*');
+          for (var i = 0; i < elements.length; i++) {
+            elements[i].style.opacity = opacity;
+          }
+        }
+    
+        var closeButton = document.getElementById('close-button');
+        if (closeButton) {
+          closeButton.addEventListener('click', hideFlashMessage);
+        }
+      });
+    </script>
+</body>
+</html>

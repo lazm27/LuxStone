@@ -1,0 +1,11 @@
+.env
+__pycache__/
+.vscode/
+diamond/
+instance/
+node_modules/
+static/
+package-lock.json
+package.json
+project.db
+tailwind.config.js

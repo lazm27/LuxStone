@@ -1,0 +1,71 @@
+{% extends "home.html" %}
+{%block base%}
+
+<div class="flex flex-wrap gap-[100px] my-10 justify-center">
+    <div class="w-[70%] px-24">
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="./static/top.jpg" class="w-full h-[100vh]" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle text-right">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="./static/neck.jpg" class="w-full h-[100vh]" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle text-right">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="./static/brac.jpg" class="w-full h-[100vh]" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle text-right">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="./static/ring.jpg" class="w-full h-[100vh]" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle text-right">❯</a>
+          </div>
+        </div>
+      </div>
+    </div> <br> <br>
+{%endblock%}
+
+{% block explore %}
+<div class="flex justify-center items-center">
+    <button class="btn btn-wide text-center bg-amber-950 text-2xl text-white text-bold hover:bg-amber-800">
+      
+      <a href="/explore">
+        Explore</a></button>
+    
+    </div><br><br> 
+
+{%endblock%}
+
+{%block designs %}<a href="/explore" class="link link-hover">Designs</a>{%endblock%} 
+
+{%block about%}
+<p class="font-serif text-amber-800 text-center py-6 text-3xl font-bold">About Us</p><br><br>
+<div class="flex flex-row flex-wrap px-6 justify-evenly">
+    <div class="flex flex-col justify-center items-center">
+<img src=".\static\dad.jpg" class="w-full h-[300px]  space-x-4" alt=""></a><br><br>
+<p class="text-center font-bold font-sans"> Thank you,<br>
+    Rafik Manasia(Heerawala)<br> 
+    HEERAWALA JEWELLERS.<br> 
+    Mumbai , India.
+</p>
+</div>
+  <p class="text-center w-2/4" >
+    More than 40 years of solid hands on experience in real diamonds. We have pioneered in making custom diamond jewellery your way. Our motto has been simple; quality service, reasonable pricing and highest level of Satisfaction.<br><br>
+    We have thousands of freshly picked design for you to choose from and order to your taste, need and budget. We make all types of real diamonds jewellery; rings, earrings, pendants, necklaces, bracelets, watches, cufflinks, belt hooks, kurta button to name a few.<br><br>
+    Heerawala Jewellers is committed to bring highest level of satisfaction and a long lasting relationship. Heerawala Jewellers is committed to provide customers best diamond jewellery in the industry and are confident in serving your diamond jewellery needs. When you think of exclusive and custom made diamond jewellery in white/yellow/ Rose goldorplatinum,think of Heerawala Jewellers.<br><br>
+    For Heerawala Jewellers, its customers are the real diamonds.</p>
+  
+
+</div>
+{%endblock%}

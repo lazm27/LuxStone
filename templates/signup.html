@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        .image{
+            position: absolute;
+            left: 0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            top: 0;
+        }
+        .create{
+           position: relative;
+           left: 800px;
+        }
+        .create input{
+            width: 400px;
+            height: 15px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        .mainpage{
+            display: flex;
+            flex-direction: column;
+        }
+        p{
+            position: relative;
+            left: 930px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="./static/top.jpg" alt="" width="650px" height="650px">
+        </div>
+        <div class="mainepage">
+            <form class="create  py-10 my-10" action="#" method="POST">
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="First Middle Last" required><br><br>
+
+                <label for="email">Email Id</label><br>
+                <input type="email" id="email" name="email" placeholder=".....@gmail.com" required><br><br>
+
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
+
+                <label for="password">Password</label><br>
+                <input type="text" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+                <label for="repass">Confirm Password</label><br>
+                <input type="password" id="repass" name="repass" placeholder="Retype your password" required><br><br>
+
+                <input type="submit" value="Create Account" style="height: 40px; width: 150px; position:relative; left:150px; background-color: rgb(70, 70, 202)">
+            </form><br><br><br><br>
+            <p>Already have an account? <a class="text-blue-600" href="/">login</a></p>
+        </div>
+    </div>
+</body>
+</html>
+!

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/7ced233697.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+    </style>
+</head>
+<body>
+  <nav class="flex flex-wrap justify-center items-center">
+    <img class="w-15 h-21" src="./static/logo2.png" alt=""><img class="w-15 h-21" src="./static/logo1.png" alt="">
+  </nav>
+  {%block base %}
+    <div class="flex flex-wrap gap-[100px] my-10">
+      <div class="w-[70%] px-24">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./static/top.jpg" class="w-full h-[100vh]" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle text-right">❯</a>
+            </div>
+          </div> 
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./static/neck.jpg" class="w-full h-[100vh]" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle text-right">❯</a>
+            </div>
+          </div> 
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./static/brac.jpg" class="w-full h-[100vh]" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle text-right">❯</a>
+            </div>
+          </div> 
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./static/ring.jpg" class="w-full h-[100vh]" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle text-right">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-screen">
+        
+<form class="w-full py-10" action="\login" method="POST" id="log-in">
+  <div class="mb-6 w-full">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+    <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required>
+  </div>
+  <div class="mb-6">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+    <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+  </div>
+  <div class="flex items-start mb-6">
+    <div class="flex items-center h-5">
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+    </div>
+    <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+  </div>
+  <div class="flex justify-center items-center">
+  <button type="submit" class="text-white bg-blue-500 hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center items-center w-screen dark:bg-amber-600 dark:hover:bg-amber-700 dark:focus:ring-orange-800">Login</button>
+ 
+</div>
+</form>
+<br>
+<p class="text-[15px]">Don't have an account? <a class="text-blue-600" href="/signup">Sign Up</a></p>
+      </div>
+    {% endblock %}
+    <div id="about-us" class="flex-col justify-center items-center">
+    {%block about%}
+    <p class="font-serif text-amber-800 text-center text-3xl font-bold">About Us</p><br><br>
+    <img src=".\static\dad.jpg" class="m-auto w-1/2" alt=""></a>
+    <div class="flex flex-col flex-wrap justify-center items-center">
+      
+      <p class="py-16 text-center w-3/4 flex-grow m-auto" >
+        More than 40 years of solid hands on experience in real diamonds. We have pioneered in making custom diamond jewellery your way. Our motto has been simple; quality service, reasonable pricing and highest level of Satisfaction.<br><br>
+        We have thousands of freshly picked design for you to choose from and order to your taste, need and budget. We make all types of real diamonds jewellery; rings, earrings, pendants, necklaces, bracelets, watches, cufflinks, belt hooks, kurta button to name a few.<br><br>
+        Heerawala Jewellers is committed to bring highest level of satisfaction and a long lasting relationship. Heerawala Jewellers is committed to provide customers best diamond jewellery in the industry and are confident in serving your diamond jewellery needs. When you think of exclusive and custom made diamond jewellery in white/yellow/ Rose goldorplatinum,think of Heerawala Jewellers.<br><br>
+        For Heerawala Jewellers, its customers are the real diamonds.<br><br>
+        Thank you,<br>
+        Rafik Manasia(Heerawala)<br> 
+        HEERAWALA JEWELLERS.<br> 
+        Mumbai , India.</p>
+      
+    </div>
+    {%endblock%}
+    <br><br>
+    {% block explore %}
+    <br><br> 
+      {% endblock %}
+<div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./static/1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+          <img src="./static/2.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./static/3.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./static/4.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./static/5.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+      </div>
+  </div>
+  <div class="flex justify-center items-center pt-4">
+      <button type="button" class="flex justify-center items-center mr-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+          <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+              </svg>
+              <span class="sr-only">Previous</span>
+          </span>
+      </button>
+      <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+          <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+              <span class="sr-only">Next</span>
+          </span>
+      </button>
+  </div>
+</div>
+<br><br>
+      <p class="text-2xl font-bold font-serif px-10">Get more updates...</p><br>
+    <div class="flex flex-col px-10 space-y-4 ">
+      <p class="font-serif">Do you want to get notified about our new designs, Sign Up for our news     letter and you"ll be among the first to get notified about our updates.</p>
+      <div class="join">
+        <input id="inp" class="input input-bordered join-item" placeholder="Email"/>
+        <button id="sub" class="btn join-item rounded-r-full bg-amber-950 text-white text-serif" onclick="subscribed()">Subscribe</button>
+        <p id="success" class="text-green-900 text-lg font-semibold font-serif hidden">Success! Now check your email to confirm your subscription.</p>
+      </div>
+    </div>
+
+      <footer class="footer footer-center p-10 text-base-content rounded">
+        <nav class="grid grid-flow-col gap-4">
+          <a href="#about-us" class="link link-hover">About us</a> 
+          <a class="link link-hover">Contact</a> 
+          {%block designs %}<a href="#log-in" class="link link-hover">Designs</a>{%endblock%} 
+        </nav> 
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a href="https://www.instagram.com/heerawala_jewellers_rafik/"><i class="fa-brands fa-square-instagram fa-2x"></i></a> 
+            <a href="https://www.youtube.com/@heerawalajewels712"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
+            <a href="https://www.facebook.com/rafik.manasiaheerawala"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+          </div>
+        </nav> 
+        <aside>
+          <p>Copyright © 2023 - All right reserved by Heerawala Jewellers Ltd</p>
+        </aside>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js">
+
+      </script>
+      <script>
+      function subscribed() {
+        var sub = document.getElementById('sub');
+      var succ = document.getElementById('success');
+      var inp = document.getElementById('inp');
+      
+        sub.style.display = 'none';
+        inp.style.display = 'none';
+        succ.style.display = 'block';
+      }
+
+      </script>
+
+
+</body>
+</html>
+
